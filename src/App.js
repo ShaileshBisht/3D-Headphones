@@ -1,6 +1,6 @@
 import "./App.css";
 import { Suspense } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import { OrbitControls, ContactShadows } from "@react-three/drei";
 import Scene from "./Scene";
 
@@ -35,7 +35,12 @@ function App() {
           /> */}
         </Canvas>
         <div className="canvas_text">
-          <h1>Headphones</h1>
+          <h1>Wireless</h1>
+          <h3>Headphones</h3>
+          <p>
+            Stylish, foldable design with Active Noise Cancellation for Crystal
+            clear audio.
+          </p>
         </div>
       </div>
     </div>
