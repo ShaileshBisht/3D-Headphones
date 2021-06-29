@@ -13,7 +13,13 @@ export default function Model(props) {
   const group = useRef();
   const { nodes, materials } = useGLTF("/scene.gltf");
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group
+      ref={group}
+      {...props}
+      dispose={null}
+      scale={1.2}
+      position={[0, -0.5, 0]}
+    >
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <mesh geometry={nodes.mesh_0.geometry} material={materials.blinn1SG} />
       </group>

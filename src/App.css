@@ -8,5 +8,6 @@
 
 .canvasFrame {
   width: 100%;
+  background: gold;
   height: 100vh;
 }
