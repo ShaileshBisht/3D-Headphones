@@ -3,6 +3,9 @@ import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, ContactShadows } from "@react-three/drei";
 import Scene from "./Scene";
+import img1 from "./images/img1.jpg";
+import img2 from "./images/img2.jpg";
+import img3 from "./images/img3.jpg";
 
 function App() {
   return (
@@ -41,6 +44,18 @@ function App() {
             Stylish, foldable design with Active Noise Cancellation for Crystal
             clear audio.
           </p>
+          <span>Quality that you can feel</span>
+          <div className="headphones_img">
+            <div className="img_box">
+              <img src={img1} alt="" />
+            </div>
+            <div className="img_box">
+              <img src={img2} alt="" />
+            </div>
+            <div className="img_box">
+              <img src={img3} alt="" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
