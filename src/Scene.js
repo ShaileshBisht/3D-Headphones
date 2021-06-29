@@ -5,23 +5,32 @@ license: CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 source: https://sketchfab.com/models/ef7799bcdba043238c4deef9d2832730
 title: Headphones
 */
-
+import { useFrame } from "@react-three/fiber";
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export default function Model(props) {
   const group = useRef();
   const { nodes, materials } = useGLTF("/scene.gltf");
+
+  useFrame(() => {
+    group.current.rotation.y += 0.005;
+  });
+
   return (
     <group
       ref={group}
       {...props}
       dispose={null}
-      scale={1.2}
-      position={[0, -0.5, 0]}
+      scale={2.5}
+      position={[4, -1, 0]}
     >
       <group rotation={[-Math.PI / 2, 0, 0]}>
-        <mesh geometry={nodes.mesh_0.geometry} material={materials.blinn1SG} />
+        <mesh
+          geometry={nodes.mesh_0.geometry}
+          material={materials.blinn1SG}
+          material-color={"white"}
+        />
       </group>
     </group>
   );
