@@ -63,9 +63,23 @@ function App() {
           </div>
         </div>
         <div className="socail_icons">
-          <GrGithub className="icon" />
-          <GrLinkedin className="icon" />
-          <GrInstagram className="icon" />
+          <a target="_blank" rel="noreferrer" href="https://github.com/">
+            <GrGithub className="icon" />
+          </a>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.linkedin.com/in/shailesh-bisht/"
+          >
+            <GrLinkedin className="icon" />
+          </a>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.instagram.com/crowned_dem0n/"
+          >
+            <GrInstagram className="icon" />
+          </a>
         </div>
         <div className="footer">
           <p>
