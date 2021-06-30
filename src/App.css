@@ -57,7 +57,7 @@
 }
 
 .img_box {
-  margin: 40px 0;
+  margin: 30px 0;
   width: 150px;
   height: 150px;
   overflow: hidden;
@@ -72,6 +72,25 @@ img {
   height: 100%;
   object-fit: fill;
   transition: all 0.3s ease-in-out;
+}
+
+.Buy_button {
+  cursor: pointer;
+  max-width: fit-content;
+  border: 2px double black;
+  transition: all 0.3s ease-in-out;
+}
+
+.Buy_button:hover {
+  transform: scale(1.08);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.Buy_button > p {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 800;
 }
 
 .socail_icons {
@@ -91,6 +110,7 @@ img {
 .icon:hover {
   color: white;
   transform: scale(1.3);
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
 .footer {
