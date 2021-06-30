@@ -1,11 +1,12 @@
 import "./App.css";
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, ContactShadows } from "@react-three/drei";
+import { ContactShadows } from "@react-three/drei";
 import Scene from "./Scene";
 import img1 from "./images/img1.jpg";
 import img2 from "./images/img2.jpg";
 import img3 from "./images/img3.jpg";
+import { GrGithub, GrInstagram, GrLinkedin } from "react-icons/gr";
 
 function App() {
   return (
@@ -56,6 +57,11 @@ function App() {
               <img src={img3} alt="" />
             </div>
           </div>
+        </div>
+        <div className="socail_icons">
+          <GrGithub />
+          <GrLinkedin />
+          <GrInstagram />
         </div>
       </div>
     </div>
