@@ -67,7 +67,7 @@ function App() {
             className="icon"
             target="_blank"
             rel="noreferrer"
-            href="https://github.com/"
+            href="https://github.com/ShaileshBisht/3D-Headphones"
           >
             <GrGithub />
           </a>
