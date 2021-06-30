@@ -58,6 +58,9 @@ function App() {
               <img src={img3} alt="" />
             </div>
           </div>
+          <div className="Buy_button">
+            <p>Buy Now</p>
+          </div>
         </div>
         <div className="socail_icons">
           <GrGithub className="icon" />
