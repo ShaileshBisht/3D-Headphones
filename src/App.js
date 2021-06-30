@@ -63,8 +63,13 @@ function App() {
           </div>
         </div>
         <div className="socail_icons">
-          <a target="_blank" rel="noreferrer" href="https://github.com/">
-            <GrGithub className="icon" />
+          <a
+            className="icon"
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/"
+          >
+            <GrGithub />
           </a>
           <a
             target="_blank"
