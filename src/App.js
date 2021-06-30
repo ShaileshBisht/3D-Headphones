@@ -59,9 +59,9 @@ function App() {
           </div>
         </div>
         <div className="socail_icons">
-          <GrGithub />
-          <GrLinkedin />
-          <GrInstagram />
+          <GrGithub className="icon" />
+          <GrLinkedin className="icon" />
+          <GrInstagram className="icon" />
         </div>
       </div>
     </div>
