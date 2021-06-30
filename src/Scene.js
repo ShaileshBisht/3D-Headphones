@@ -6,33 +6,42 @@ source: https://sketchfab.com/models/ef7799bcdba043238c4deef9d2832730
 title: Headphones
 */
 import { useFrame } from "@react-three/fiber";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useGLTF } from "@react-three/drei";
+import { useSpring, a } from "@react-spring/three";
 
 export default function Model(props) {
   const group = useRef();
   const { nodes, materials } = useGLTF("/scene.gltf");
+
+  const [hover, setHover] = useState(false);
+  const ani = useSpring({
+    scale: hover ? "2.7" : "2.4",
+    color1: hover ? "gold" : "white",
+  });
 
   useFrame(() => {
     group.current.rotation.y += 0.005;
   });
 
   return (
-    <group
+    <a.group
+      onPointerOver={() => setHover(true)}
+      onPointerOut={() => setHover(false)}
       ref={group}
       {...props}
       dispose={null}
-      scale={2.5}
+      scale={ani.scale}
       position={[4, -1, 0]}
     >
       <group rotation={[-Math.PI / 2, 0, 0]}>
-        <mesh
+        <a.mesh
           geometry={nodes.mesh_0.geometry}
           material={materials.blinn1SG}
-          material-color={"white"}
+          material-color={ani.color1}
         />
       </group>
-    </group>
+    </a.group>
   );
 }
 
