@@ -7,6 +7,7 @@ import img1 from "./images/img1.jpg";
 import img2 from "./images/img2.jpg";
 import img3 from "./images/img3.jpg";
 import { GrGithub, GrInstagram, GrLinkedin } from "react-icons/gr";
+import { FcLike } from "react-icons/fc";
 
 function App() {
   return (
@@ -62,6 +63,11 @@ function App() {
           <GrGithub className="icon" />
           <GrLinkedin className="icon" />
           <GrInstagram className="icon" />
+        </div>
+        <div className="footer">
+          <p>
+            Made with <FcLike /> by <span>Shailesh Bisht</span>
+          </p>
         </div>
       </div>
     </div>
