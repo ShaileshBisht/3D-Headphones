@@ -82,6 +82,7 @@ img {
 }
 
 .Buy_button:hover {
+  letter-spacing: 2px;
   background: white;
   border: 2px double yellow;
   transform: scale(1.02);
