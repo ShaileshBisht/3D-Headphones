@@ -5,6 +5,7 @@ license: CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 source: https://sketchfab.com/models/ef7799bcdba043238c4deef9d2832730
 title: Headphones
 */
+import * as THREE from "three";
 import { useFrame } from "@react-three/fiber";
 import React, { useRef, useState } from "react";
 import { useGLTF } from "@react-three/drei";
@@ -16,12 +17,33 @@ export default function Model(props) {
 
   const [hover, setHover] = useState(false);
   const ani = useSpring({
-    scale: hover ? "2.7" : "2.4",
+    scale: hover ? "2.7" : "2.5",
     color1: hover ? "gold" : "white",
   });
 
-  useFrame(() => {
-    group.current.rotation.y += 0.005;
+  useFrame((state) => {
+    //group.current.rotation.y += 0.005;
+    const t = state.clock.getElapsedTime();
+    group.current.rotation.x = THREE.MathUtils.lerp(
+      group.current.rotation.x,
+      Math.cos(t / 2) / 10 + 0.25,
+      0.1
+    );
+    group.current.rotation.y = THREE.MathUtils.lerp(
+      group.current.rotation.y,
+      Math.sin(t / 4) / 10,
+      0.1
+    );
+    group.current.rotation.z = THREE.MathUtils.lerp(
+      group.current.rotation.z,
+      Math.sin(t / 4) / 20,
+      0.1
+    );
+    group.current.position.y = THREE.MathUtils.lerp(
+      group.current.position.y,
+      (-5 + Math.sin(t)) / 5,
+      0.1
+    );
   });
 
   return (
@@ -34,7 +56,7 @@ export default function Model(props) {
       scale={ani.scale}
       position={[4, -1, 0]}
     >
-      <group rotation={[-Math.PI / 2, 0, 0]}>
+      <group rotation={[-Math.PI / 1.5, 0, 0]}>
         <a.mesh
           geometry={nodes.mesh_0.geometry}
           material={materials.blinn1SG}

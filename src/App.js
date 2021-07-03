@@ -1,7 +1,7 @@
 import "./App.css";
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { ContactShadows } from "@react-three/drei";
+import { ContactShadows, OrbitControls } from "@react-three/drei";
 import Scene from "./Scene";
 import img1 from "./images/img1.jpg";
 import img2 from "./images/img2.jpg";
